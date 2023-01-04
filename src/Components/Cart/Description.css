@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+}
+
+#head {
+  color: blueviolet;
+}
+#amenities {
+  width: 600px;
+  border: 2px solid red;
+}
+#amicon {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
