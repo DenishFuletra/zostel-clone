@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import NewYear from "./Section/NewYear";
+import Northen from "./Section/Northen";
+import Southern from "./Section/Southern";
+import Weekend from "./Section/Weekend";
+import Food from "./Section/Food";
+import Nature from "./Section/Nature";
+import OffBeat from "./Section/OffBeat";
+import Destination from "./Section/Destination";
 
-function App() {
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" >
+      <Destination/>
+      <NewYear />
+      <Northen />
+      <Southern/>
+      <Weekend />
+      <Food/>
+      <Nature/>
+      <OffBeat/>
+      
+
     </div>
   );
 }
-
-export default App;
