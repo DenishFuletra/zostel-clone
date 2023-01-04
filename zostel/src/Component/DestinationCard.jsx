@@ -10,7 +10,7 @@ function DestinationCard({ data }) {
             <div className="destinationCard">
                 <img src={data.index0.image} alt="" />
                 <div>
-                    <h1 style={{ bottom: "370px" }}>{data.index0.name}</h1>
+                    <h1 style={{ bottom: "335px" }}>{data.index0.name}</h1>
                 </div>
             </div>
 
