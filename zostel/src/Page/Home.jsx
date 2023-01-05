@@ -31,10 +31,6 @@ export default function Home() {
       <OffBeat />
       <Award />
       <Latest />
-      
-
-
-
     </div>
   );
 }

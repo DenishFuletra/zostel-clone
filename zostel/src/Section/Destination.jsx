@@ -30,7 +30,7 @@ function Destination() {
         });
     }
     //setData(cards);
-    console.log(cards);
+    // console.log(cards);
 
 
 
