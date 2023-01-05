@@ -25,7 +25,7 @@
 
   .react-multiple-carousel__arrow:hover {
     background: rgb(254 247 247 / 60%);
-}
+  }
 
   .react-multiple-carousel__arrow::before {
     color: #f15824

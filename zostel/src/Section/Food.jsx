@@ -10,9 +10,9 @@ function Food() {
     let [data, setData] = useState([]);
 
     let fetchData = async () => {
-        let responce = await fetch(`https://resisted-cubic-zydeco.glitch.me/food`);
+        let responce = await fetch(`http://localhost:5000/food`);
         let data = await responce.json();
-       // console.log(data);
+        // console.log(data);
         setData(data);
     }
 
@@ -32,7 +32,7 @@ function Food() {
                     draggable={true}
                     transitionDuration={1000}
                     renderArrowsWhenDisabled={false}
-                    >
+                >
                     {data.map(function (elem, i) {
                         return (
                             <Card

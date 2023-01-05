@@ -4,41 +4,26 @@ import { responsive } from "../Component/ResponsiveData";
 import Card from "../Component/Card";
 import { useState, useEffect } from "react";
 import "./NewYear.css";
-import DestinationCard from "../Component/DestinationCard";
+import NewCard from "../Component/NewCard";
 
 
-function Destination() {
+function New() {
     let [data, setData] = useState([]);
 
     let fetchData = async () => {
-        let responce = await fetch(`http://localhost:5000/destination`);
+        let responce = await fetch(`http://localhost:5000/new`);
         let data = await responce.json();
-        setData(data);
         // console.log(data);
-
+        setData(data);
     }
 
     useEffect(() => {
         fetchData();
-
     }, [])
-    const cards = [];
-    for (let i = 0; i < data.length/2; i = i + 2) {
-        cards.push({
-            index0: data[i],
-            index1: data[i + 1]
-        });
-    }
-    //setData(cards);
-    console.log(cards);
-
-
-
-
     return (
-        <div className="newYear" style={{backgroundColor:"white"}}>
+        <div className="newYear">
             <div style={{ marginTop: "15px" }}>
-                <h1>Explore <span style={{ color: "#f15824" }}>Destinations</span></h1>
+                <h1>What's <span style={{ color: "#f15824" }}>New</span></h1>
             </div>
             <div id="slider">
                 <Carousel showDots={false}
@@ -47,20 +32,20 @@ function Destination() {
                     keyBoardControl={true}
                     draggable={true}
                     transitionDuration={1000}>
-                    {cards.map(function (elem) {
-                        // console.log(elem);
+                    {data.map(function (elem, i) {
                         return (
-                            <DestinationCard
+                            <NewCard
                                 data={elem}
+                                key={i}
                             />
                         )
                     })}
+
                 </Carousel>
             </div>
 
         </div>
     );
-
 }
 
-export default Destination;
+export default New;

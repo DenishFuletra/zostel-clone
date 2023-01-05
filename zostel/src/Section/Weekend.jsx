@@ -10,7 +10,7 @@ function Weekend() {
     let [data, setData] = useState([]);
 
     let fetchData = async () => {
-        let responce = await fetch(`https://resisted-cubic-zydeco.glitch.me/weekend`);
+        let responce = await fetch(`http://localhost:5000/weekend`);
         let data = await responce.json();
        // console.log(data);
         setData(data);
