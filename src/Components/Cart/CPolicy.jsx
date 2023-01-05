@@ -2,8 +2,8 @@ import React from "react";
 
 export default function CPolicy() {
   return (
-    <div>
-      <h1>Cancellation Policy</h1>
+    <div style={{ width: "1200px", margin: "auto" }}>
+      <h2>Cancellation Policy</h2>
       <div>
         <p>
           We understand that sometimes plans change. Hence, to make it light on
