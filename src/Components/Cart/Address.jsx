@@ -2,11 +2,18 @@ import React from "react";
 import "./Description.css";
 import { BsWhatsapp } from "react-icons/bs";
 import { MdMap } from "react-icons/md";
-
+import { useSelector } from "react-redux";
 import { RiArrowUpSLine, RiArrowDownSLine } from "react-icons/ri";
 import { useState } from "react";
 export default function Address() {
   const [box, setbox] = useState(false);
+  const data = {
+    address: useSelector((state) => state.locationReducer.locationdata.address),
+    contact: useSelector((state) => state.locationReducer.locationdata.contact),
+    location: useSelector(
+      (state) => state.locationReducer.locationdata.location
+    ),
+  };
   return (
     <div
       style={
@@ -21,21 +28,12 @@ export default function Address() {
       }
     >
       <h2 id="name">Locate Us</h2>
-      <div
-        style={{ border: "2px solid red", height: "300px", display: "flex" }}
-      >
-        <div
-          id="address"
-          style={{ border: "2px solid red", width: "400px", height: "300px" }}
-        >
+      <div style={{ height: "300px", display: "flex" }}>
+        <div id="address" style={{ width: "400px", height: "300px" }}>
           <h4>Address:</h4>
-          <p style={{ marginTop: "-15px" }}>
-            {""}
-            Beach Road, Near Vijay Beach Park, Sea View Ward, Padinjare
-            Kurisadi, Kanjiramchira, Alappuzha, Kerala
-          </p>
+          <p style={{ marginTop: "-15px" }}>{data.address}</p>
 
-          <h5 style={{ marginTop: "-10px" }}>Contact:{""}0440114576</h5>
+          <h5 style={{ marginTop: "-10px" }}>Contact:{data.contact}</h5>
           <div id="ws">
             <BsWhatsapp size="20px" /> <p> Whatsapp us</p>
           </div>
@@ -76,13 +74,10 @@ export default function Address() {
             <p>Get directions</p>
           </div>
         </div>
-        <div
-          id="map"
-          style={{ border: "2px solid red", height: "300px", width: "800px" }}
-        >
+        <div id="map" style={{ height: "300px", width: "800px" }}>
           <iframe
             style={{ width: "800px", height: "300px", borderRadius: "10px" }}
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62961.39989537365!2d76.30708641222128!3d9.501119612354616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0884f1aa296b61%3A0xb84764552c41f85a!2sAlappuzha%2C%20Kerala!5e0!3m2!1sen!2sin!4v1672924299989!5m2!1sen!2sin"
+            src={data.location}
           ></iframe>
         </div>
       </div>

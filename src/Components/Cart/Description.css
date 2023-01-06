@@ -7,7 +7,6 @@ table {
 }
 #amenities {
   width: 600px;
-  border: 2px solid red;
 }
 #amicon {
   display: flex;
@@ -58,4 +57,18 @@ table {
 }
 #mapframe {
   border: 2px solid blue;
+}
+#bookmain {
+  margin: auto;
+  border: 2px solid red;
+  width: 1200px;
+  display: flex;
+}
+#bookroomdiv {
+  border: 2px solid green;
+  width: 800px;
+}
+#booksum {
+  border: 2px solid yellow;
+  width: 400px;
 }

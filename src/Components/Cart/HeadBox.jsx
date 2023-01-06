@@ -1,9 +1,16 @@
+import { style } from "@mui/system";
+import { MdHotel } from "react-icons/md";
+import { useSelector } from "react-redux";
 export default function HeadBox() {
+  const data = useSelector(
+    (state) => state.locationReducer.locationdata.hotelimg
+  );
+  console.log(data);
   return (
     <div
       style={{
         display: "flex",
-        border: "2px solid red",
+
         width: "1200px",
         height: "500px",
         margin: "auto",
@@ -12,40 +19,64 @@ export default function HeadBox() {
     >
       <div
         style={{
-          border: "2px solid blue",
           width: "950px",
           height: "500px",
+          margin: "3px",
 
           borderRadius: "10px",
         }}
       >
-        <h1>main image</h1>
+        <img
+          src={data === undefined ? "" : data[0]}
+          alt="1"
+          width="100%"
+          height="100%"
+          style={{ borderRadius: "10px" }}
+        />
       </div>
-      <div style={{ border: "2px solid green", width: "250px" }}>
+      <div style={{ width: "250px" }}>
         {" "}
         <div
           style={{
-            border: "2px solid red",
             height: "150px",
+            margin: "3px",
           }}
         >
-          <h1>image1</h1>
+          <img
+            src={data === undefined ? "" : data[1]}
+            alt="2"
+            width="100%"
+            height="100%"
+            style={{ borderRadius: "10px" }}
+          />
         </div>
         <div
           style={{
-            border: "2px solid red",
             height: "150px",
+            margin: "3px",
           }}
         >
-          <h1>image1</h1>
+          <img
+            src={data === undefined ? "" : data[2]}
+            alt="3"
+            width="100%"
+            height="100%"
+            style={{ borderRadius: "10px" }}
+          />
         </div>
         <div
           style={{
-            border: "2px solid red",
             height: "150px",
+            margin: "3px",
           }}
         >
-          <h1>image1</h1>
+          <img
+            src={data === undefined ? "" : data[3]}
+            alt="4"
+            width="100%"
+            height="100%"
+            style={{ borderRadius: "10px" }}
+          />
         </div>
         <div style={{ border: "2px solid pink", height: "30px" }}>
           <p>View More</p>

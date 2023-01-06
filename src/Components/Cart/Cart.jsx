@@ -5,26 +5,34 @@ import Navbox from "./Navbox";
 import Ppolicy from "./Ppolicy";
 import Address from "./Address";
 import { useState, useEffect } from "react";
-
+import { getLocationData } from "../../Redux/Action/action";
+import { useDispatch, useSelector } from "react-redux";
+import Loader from "../Loader/Loader";
+import Booking from "./Booking";
 export default function Cart() {
-  const [data, setdata] = useState([]);
+  const data = useSelector((state) => state.locationReducer.locationdata);
+  const [place, setplace] = useState("Banglore");
+  const isLoad = useSelector((state) => state.locationReducer.locationLoading);
+  const dispatch = useDispatch();
   useEffect(() => {
-    fetch(`https://resisted-cubic-zydeco.glitch.me/booking/1`)
-      .then((res) => res.json())
-      .then((val) => {
-        setdata(val);
-      });
+    dispatch(getLocationData(place));
   }, []);
-  console.log(data);
   return (
     <div>
       <h1>Home</h1>
-      <Navbox city={data.city} />
-      <HeadBox />
-      <Description city={data.city} />
-      <Address />
-      <Ppolicy />
-      <CPolicy />
+      {isLoad ? (
+        <Loader />
+      ) : (
+        <div>
+          <Navbox />
+          <HeadBox />
+          <Description />
+          <Booking />
+          <Address />
+          <Ppolicy />
+          <CPolicy />
+        </div>
+      )}
     </div>
   );
 }

@@ -18,33 +18,23 @@ import BeachAccessIcon from "@mui/icons-material/BeachAccess";
 import LuggageIcon from "@mui/icons-material/Luggage";
 import LocalHotelIcon from "@mui/icons-material/LocalHotel";
 import ShowerIcon from "@mui/icons-material/Shower";
-
+import { useSelector } from "react-redux";
 import LocalParking from "@mui/icons-material/LocalParking";
 
 export default function Description() {
+  const data = {
+    cityname: useSelector((state) => state.locationReducer.locationdata.city),
+    descr: useSelector((state) => state.locationReducer.locationdata.desc),
+    recexp: useSelector((state) => state.locationReducer.locationdata.recexp),
+  };
+
   return (
     <div style={{ display: "flex", width: "1200px", margin: "auto" }}>
       <div style={{ width: "600px" }}>
-        <h1 id="head">Zostel // Location Name</h1>
-        <p style={{ marginTop: "-10px" }}>
-          {""}
-          Situated right at the scenic Alappuzha Beach, Zostel Alleppey is a
-          happening backpackers' hostel ideal for exploring the town and its
-          backwaters. A white-coloured building surrounded by swaying palm trees
-          invites you to a dreamy beach vacation here. The hostel is equipped
-          with workstations, a colourful common area with indoor games, and a
-          sprawling rooftop with an unobstructed view of the Arabian Sea. Look
-          forward to a tour of backwaters on a houseboat, soothing village
-          walks, and crimson-gold beach sunsets. And when you make your way back
-          to the hostel, a lively evening full of chatter with fellow travellers
-          will await
-        </p>
+        <h1 id="head">Zostel {data.cityname}</h1>
+        <p style={{ marginTop: "-10px" }}>{data.descr}</p>
         <h4>Recommended experiences:</h4>
-        <p>
-          {""}Experience the village life in Kuttanad, watch sunsets, and
-          explore long stretches of sand. Watch locals practicing for snake boat
-          race, go on a boat ride on backwaters, and chill by the campfire.
-        </p>
+        <p>{data.recexp}</p>
       </div>
       <div id="amenities">
         <h2>Amenities</h2>
