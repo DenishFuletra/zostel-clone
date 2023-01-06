@@ -60,15 +60,42 @@ table {
 }
 #bookmain {
   margin: auto;
-  border: 2px solid red;
+
   width: 1200px;
   display: flex;
 }
 #bookroomdiv {
-  border: 2px solid green;
   width: 800px;
 }
 #booksum {
-  border: 2px solid yellow;
   width: 400px;
+}
+#bookhead {
+  display: flex;
+  align-items: center;
+}
+#main {
+  background-color: #e8f0f2;
+}
+#roomname {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+#selbeddiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#bedroom {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  margin: 15px;
+  height: 200px;
+  border-radius: 10px;
+}
+#roomdetails {
+  padding: 30px;
 }
