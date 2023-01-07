@@ -12,13 +12,16 @@ import Award from "../Section/Award";
 import Latest from "../Section/Latest";
 import New from "../Section/New";
 import OfferComponent from "../Component/OfferComponent";
+import Slider from "../Section/Slider";
 import SliderComponent from "../Component/SliderComponent";
+
 
 export default function Home() {
 
   return (
     <div style={{display:"flex", flexDirection:"column", margin:"auto",justifyContent:"center"}}>
-      <SliderComponent />
+      <Slider />
+      {/* <SliderComponent/> */}
       <Destination />
       <New />
       <OfferComponent />
@@ -31,6 +34,7 @@ export default function Home() {
       <OffBeat />
       <Award />
       <Latest />
+      
     </div>
   );
 }

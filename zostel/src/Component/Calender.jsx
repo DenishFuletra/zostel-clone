@@ -14,27 +14,27 @@ const Calender = () => {
     console.log(endDate);
     return (
         <>
-         
-        <DatePicker
-        selected={startDate}
-        onChange={(date) => setStartDate(date)}
-        selectsStart
-        monthsShown={2} 
-        startDate={startDate}
-        endDate={endDate}
-        
-         />
-        
-      <DatePicker
-        selected={endDate}
-        onChange={(date) => setEndDate(date)}
-        selectsEnd
-        startDate={startDate}
-        endDate={endDate}
-        minDate={startDate}
-        monthsShown={2} 
-        closeOnScroll={true}
-         />
+
+            <DatePicker
+                selected={startDate}
+                onChange={(date) => setStartDate(date)}
+                selectsStart
+                monthsShown={2}
+                startDate={startDate}
+                endDate={endDate}
+
+            />
+
+            <DatePicker
+                selected={endDate}
+                onChange={(date) => setEndDate(date)}
+                selectsEnd
+                startDate={startDate}
+                endDate={endDate}
+                minDate={startDate}
+                monthsShown={2}
+                closeOnScroll={true}
+            />
         </>
     );
 };
