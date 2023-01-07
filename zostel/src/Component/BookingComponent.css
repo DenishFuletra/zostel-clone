@@ -32,7 +32,7 @@
 }
 
 .booking-place-hover:hover {
-    border-bottom: 2px solid red;
+    cursor: pointer;
 }
 
 #booking-place-div {

@@ -1,6 +1,6 @@
 import "./LatestReadCard.css";
 export default function LatestReadCard(data) {
-    console.log(data);
+    // console.log(data);
     return (
         <div id="latestContainer">
             <div>

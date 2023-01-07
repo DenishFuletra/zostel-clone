@@ -1,6 +1,6 @@
 import "./NewCard.css";
 export default function NewCard(data) {
-    console.log(data);
+    // console.log(data);
     return (
         <div id="newContainer">
             <div>

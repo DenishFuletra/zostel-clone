@@ -23,15 +23,28 @@ const options = [
 ];
 export default function BookingComponent() {
     const [selectedOption, setSelectedOption] = useState(null);
+    console.log(selectedOption);
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
+    const [option, setOption] = useState("DESTINATION")
+
+    let HandleSubmit = (e) => {
+        e.preventDefault();
+        let data = {
+            city: selectedOption,
+            startDate: startDate,
+            endDate: endDate,
+        }
+        localStorage.setItem("data", JSON.stringify(data));
+
+    }
     return (
         <div id="booking-container">
             <div id="booking-place">
-                <h3 className="booking-place-hover">DESTINATION</h3>
-                <h3 className="booking-place-hover">ZOSTEL</h3>
-                <h3  className="booking-place-hover">ZOSTEL HOMES</h3>
-                <h3 className="booking-place-hover">ZOSTEL PLUS</h3>
+                <h3 style={option==="DESTINATION"?{borderBottom:"2px solid red"}:{borderBottom:"none"}} onClick={() => setOption("DESTINATION")} className="booking-place-hover">DESTINATION</h3>
+                <h3 style={option==="ZOSTEL"?{borderBottom:"2px solid red"}:{borderBottom:"none"}} onClick={() => setOption("ZOSTEL")} className="booking-place-hover">ZOSTEL</h3>
+                <h3 style={option==="ZOSTEL HOMES"?{borderBottom:"2px solid red"}:{borderBottom:"none"}} onClick={() => setOption("ZOSTEL HOMES")} className="booking-place-hover">ZOSTEL HOMES</h3>
+                <h3 style={option==="ZOSTEL PLUS"?{borderBottom:"2px solid red"}:{borderBottom:"none"}} onClick={() => setOption("ZOSTEL PLUS")} className="booking-place-hover">ZOSTEL PLUS</h3>
             </div>
             <div id="booking-time">
                 <div id="booking-place-div">
@@ -55,7 +68,10 @@ export default function BookingComponent() {
                                 selectsStart
                                 monthsShown={2}
                                 startDate={startDate}
+                                dateFormat="dd/MM/yyyy"
                                 endDate={endDate}
+                                minDate={new Date()}
+                            // excludeDates={[new Date(), subDays(new Date(), 1)]}
                             />
                         </div>
                     </div>
@@ -74,12 +90,13 @@ export default function BookingComponent() {
                                 minDate={startDate}
                                 monthsShown={2}
                                 closeOnScroll={true}
+                                dateFormat="dd/MM/yyyy"
                             />
                         </div>
                     </div>
                 </div>
                 <div id="booking-button">
-                    <button>Book Now</button>
+                    <button onClick={HandleSubmit}>Book Now</button>
                 </div>
             </div>
 
