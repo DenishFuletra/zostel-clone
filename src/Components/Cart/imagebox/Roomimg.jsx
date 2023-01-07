@@ -30,6 +30,10 @@ function Roomimg10bed() {
         return (
           <Slide
             label="Giau Pass - Italy"
+            style={{
+              borderTopLeftRadius: "10px",
+              borderBottomLeftRadius: "10px",
+            }}
             background={{
               backgroundImageSrc: item,
             }}
@@ -70,6 +74,10 @@ function Roomimg6bed() {
         return (
           <Slide
             label="Giau Pass - Italy"
+            style={{
+              borderTopLeftRadius: "10px",
+              borderBottomLeftRadius: "10px",
+            }}
             background={{
               backgroundImageSrc: item,
             }}
@@ -111,6 +119,10 @@ function Roomimg4bed() {
         return (
           <Slide
             label="Giau Pass - Italy"
+            style={{
+              borderTopLeftRadius: "10px",
+              borderBottomLeftRadius: "10px",
+            }}
             background={{
               backgroundImageSrc: item,
             }}

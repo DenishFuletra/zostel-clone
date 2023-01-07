@@ -65,10 +65,10 @@ table {
   display: flex;
 }
 #bookroomdiv {
-  width: 800px;
+  width: 900px;
 }
 #booksum {
-  width: 400px;
+  width: 300px;
 }
 #bookhead {
   display: flex;
@@ -95,6 +95,7 @@ table {
   margin: 15px;
   height: 200px;
   border-radius: 10px;
+  width: 870px;
 }
 #roomdetails {
   padding: 30px;
