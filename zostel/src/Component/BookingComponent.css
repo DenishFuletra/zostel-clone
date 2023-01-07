@@ -21,7 +21,7 @@
     border-bottom: 2px solid #e7edf3;
     color: #4a5568;
     text-align: center;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 .booking-place-hover {
