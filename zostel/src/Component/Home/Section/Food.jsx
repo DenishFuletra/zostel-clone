@@ -10,7 +10,7 @@ function Food() {
     let [data, setData] = useState([]);
 
     let fetchData = async () => {
-        let responce = await fetch(`http://localhost:5000/food`);
+        let responce = await fetch(`https://resisted-cubic-zydeco.glitch.me/food`);
         let data = await responce.json();
         // console.log(data);
         setData(data);

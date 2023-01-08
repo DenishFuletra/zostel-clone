@@ -10,7 +10,7 @@ function New() {
     let [data, setData] = useState([]);
 
     let fetchData = async () => {
-        let responce = await fetch(`http://localhost:5000/new`);
+        let responce = await fetch(`https://resisted-cubic-zydeco.glitch.me/new`);
         let data = await responce.json();
         // console.log(data);
         setData(data);
