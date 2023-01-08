@@ -13,7 +13,7 @@ function Roomimg10bed() {
       controller={{
         initialSlide: 1,
         slidingDuration: 500,
-        slidingDelay: 100,
+        slidingDelay: 50,
         onSliding: (nextSlide) =>
           console.debug("onSliding(nextSlide): ", nextSlide),
         onBeforeSliding: (previousSlide, nextSlide) =>
