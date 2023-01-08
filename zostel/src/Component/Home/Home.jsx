@@ -13,13 +13,14 @@ import Latest from "../Home/Section/Latest";
 import New from "../Home/Section/New";
 import OfferComponent from "../Home/HomeComponent/OfferComponent";
 import Slider from "../Home/Section/Slider"
-import SliderComponent from "../Home/HomeComponent/SliderComponent";
+
 
 
 export default function Home() {
 
   return (
     <div style={{display:"flex", flexDirection:"column", margin:"auto",justifyContent:"center"}}>
+      
       <Slider />
       <Destination />
       <New />
