@@ -11,7 +11,7 @@ function Destination() {
     let [data, setData] = useState([]);
 
     let fetchData = async () => {
-        let responce = await fetch(`hhttps://resisted-cubic-zydeco.glitch.me/destination`);
+        let responce = await fetch(`https://resisted-cubic-zydeco.glitch.me/destination`);
         let data = await responce.json();
         setData(data);
         // console.log(data);

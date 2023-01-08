@@ -54,36 +54,46 @@
     display: flex;
     background-color: #0A181D;
     color: white;
+    gap: 20px;
     width: 40%;
     margin-left: 40%;
     padding: 10px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    z-index: 1;
+    position: absolute;
 }
 .homesmenuhover
 {
     display: flex;
+    gap: 20px;
     background-color: #0A181D;
     color: white;
+    gap: 20px;
     width: 30%;
     margin-left:47%;
     padding: 10px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    z-index: 1;
+    position: absolute;
 }
 .plusmenuhover
 {
     display: flex;
     background-color: #0A181D;
     color: white;
+    gap: 20px;
     width: 15%;
     margin-left:57%;
     padding: 10px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    z-index: 1;
+    position: absolute;
 }
 .joinmenuhover
 {
@@ -96,6 +106,8 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    z-index: 1;
+    position: absolute; 
 }
 .zostelmenuhover div p:hover
 {
@@ -121,15 +133,16 @@
 /* navbar2 */
 .nav2
 {
-    margin-top:-20px;
-    margin-bottom:-40px ;
+    margin-top:-5px;
+    margin-bottom:-10px ;
     display: flex;
     justify-content: space-between;
     padding-right:100px;
 }
 .logo2
 {
-    width:150px;    
+    width:150px; 
+    padding-left: 15px;   
 }
 .menuicon
 {

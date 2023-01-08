@@ -32,6 +32,8 @@
     padding: 10px 100px;
     gap: 15px;
     cursor: pointer;
+    z-index: -1;
+    position: sticky;
 }
 .data div
 {

@@ -5,12 +5,15 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { useWindowDimensions } from "./windowsize/useWindowDimensions"
 
+
 export default function Navbar() {
-  const [menuhover, setMenuhover] = useState(false);
-  const [homesmenuhover, setHomesmenuhover] = useState(false);
-  const [plusmenuhover, setPlusmenuhover] = useState(false);
-  const [joinmenuhover, setJoinmenuhover] = useState(false);
-  const [nav, setNav] = useState(false);
+  const [menuhover, setMenuhover] = useState({
+    zostel: false,
+    homes: false,
+    plus: false,
+    join: false,
+  });
+  const [nav, setNav] = useState(true);
   const { height, width } = useWindowDimensions();
 
 
@@ -22,13 +25,36 @@ export default function Navbar() {
           <Link to="/"><img className={ns.logo} src={logo} alt="logo" style={{ width: "80%" }} /></Link>
         </div>
         <div className={ns.menu}>
-          <Link to={"/destination"} className={ns.menuText}>Destinations</Link>
-          <Link to={"/zostel"} className={ns.menuText}>Zostel <span onClick={() => setMenuhover(!menuhover)}> {menuhover ? <i class="fa-solid fa-chevron-up"></i> : <i class="fa-solid fa-chevron-down"></i>}</span> </Link>
-          <Link to={"/zostelhomes"} className={ns.menuText}>Zostel Homes <span onClick={() => setHomesmenuhover(!homesmenuhover)}>{homesmenuhover ? <i class="fa-solid fa-chevron-up"></i> : <i class="fa-solid fa-chevron-down"></i>}</span> </Link>
-          <Link to={"/zostelplus"} className={ns.menuText}>Zostel Plus  <span onClick={() => setPlusmenuhover(!plusmenuhover)}>{plusmenuhover ? <i class="fa-solid fa-chevron-up"></i> : <i class="fa-solid fa-chevron-down"></i>}</span></Link>
-          <Link to={"/franchise"} className={ns.menuText}>Franchise</Link>
-          <Link to={"/joinus"} className={ns.menuText}>Join us  <span onClick={() => setJoinmenuhover(!joinmenuhover)}>{joinmenuhover ? <i class="fa-solid fa-chevron-up"></i> : <i class="fa-solid fa-chevron-down"></i>}</span></Link>
-          <Link to={"/blog"} className={ns.menuText}>Blog</Link>
+          <Link to={"/destinations"} className={ns.menuText}>Destinations</Link>
+          <p className={ns.menuText}>Zostel <span onClick={() => setMenuhover(
+            {
+              zostel: !menuhover.zostel,
+              homes: false,
+              plus: false,
+              join: false
+            }
+          )}> {menuhover.zostel ? <i class="fa-solid fa-chevron-up"></i> : <i class="fa-solid fa-chevron-down"></i>}</span> </p>
+          <p className={ns.menuText}>Zostel Homes <span onClick={() => setMenuhover(
+            {
+              zostel: false,
+              homes: !menuhover.homes,
+              plus: false,
+              join: false
+            })}>{menuhover.homes ? <i class="fa-solid fa-chevron-up"></i> : <i class="fa-solid fa-chevron-down"></i>}</span> </p>
+          <p className={ns.menuText}>Zostel Plus  <span onClick={() => setMenuhover({
+            zostel: false,
+            homes: false,
+            plus: !menuhover.plus,
+            join: false
+          })}>{menuhover.plus ? <i class="fa-solid fa-chevron-up"></i> : <i class="fa-solid fa-chevron-down"></i>}</span></p>
+          <p className={ns.menuText}>Franchise</p>
+          <p className={ns.menuText}>Join us  <span onClick={() => setMenuhover({
+            zostel: false,
+            homes: false,
+            plus: false,
+            join: !menuhover.join
+          })}>{menuhover.join ? <i class="fa-solid fa-chevron-up"></i> : <i class="fa-solid fa-chevron-down"></i>}</span></p>
+          <p className={ns.menuText}>Blog</p>
           <button className={ns.downloadbtn}>Download App</button>
         </div>
       </nav> :
@@ -68,7 +94,7 @@ export default function Navbar() {
 
 
       {/* first dropdown */}
-      {menuhover ?
+      {menuhover.zostel ?
         <div className={ns.zostelmenuhover} >
           <div>
             <p>Zostel Alleppey</p>
@@ -124,7 +150,7 @@ export default function Navbar() {
         </div> : null}
 
       {/* second dropdown */}
-      {homesmenuhover ?
+      {menuhover.homes ?
         <div className={ns.homesmenuhover} >
           <div>
             <p>Zostel Alleppey</p>
@@ -154,7 +180,7 @@ export default function Navbar() {
         </div> : null}
 
       {/* third dropdown */}
-      {plusmenuhover ?
+      {menuhover.plus ?
         <div className={ns.plusmenuhover}>
           <div>
             <p>Zostel Coorg</p>
@@ -168,7 +194,7 @@ export default function Navbar() {
         </div> : null}
 
       {/* four dropdown */}
-      {joinmenuhover ?
+      {menuhover.join ?
         <div className={ns.joinmenuhover}>
           <div>
             <p>Careers</p>
