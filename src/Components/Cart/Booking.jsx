@@ -1,5 +1,7 @@
 import React from "react";
 import "./Description.css";
+import { useContext } from "react";
+import { ContextData } from "../Context/ContextData";
 import { RiArrowDownSLine } from "react-icons/ri";
 import Manlogo from "../Loader/Manlogo";
 import { Roomimg10bed, Roomimg4bed, Roomimg6bed } from "./imagebox/Roomimg";
@@ -17,19 +19,22 @@ import WbIncandescentIcon from "@mui/icons-material/WbIncandescent";
 import LocalLaundryService from "@mui/icons-material/LocalLaundryService";
 import SummaryBox from "./SummaryBox";
 import { useState } from "react";
-import Counter from "../Loader/Counter";
+import { Counter1 } from "../Loader/Counter";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 export default function Booking() {
-  const [showPrice, setshowPrice] = useState(false);
-  const [bedcount, setbedcount] = useState({
-    room1: 0,
-    room2: 1,
-    room3: 3,
-  });
+  const [selectedOption, setSelectedOption] = useState(null);
+  console.log(selectedOption);
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
   const [showbtn, setshowbtn] = useState({
     roombtn1: false,
     roombtn2: false,
     roombtn3: false,
   });
+  console.log(startDate, endDate);
+  // let val = document.getElementById("countval").value;
+  // console.log(val);
   return (
     <div id="main">
       <div id="bookmain">
@@ -45,7 +50,37 @@ export default function Booking() {
                 <RiArrowDownSLine color="rgb(236, 68, 22)" fontSize="20px" />
               </button>
             </div>
-            <div>Calender</div>
+            <div id="cal">
+              <div>
+                <DatePicker
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                  selectsStart
+                  monthsShown={2}
+                  startDate={startDate}
+                  dateFormat="dd/MM/yyyy"
+                  endDate={endDate}
+                  minDate={new Date()}
+                  // excludeDates={[new Date(), subDays(new Date(), 1)]}
+                />
+              </div>
+              <div>
+                <i class="fa-solid fa-right-long"></i>
+              </div>
+              <div>
+                <DatePicker
+                  selected={endDate}
+                  onChange={(date) => setEndDate(date)}
+                  selectsEnd
+                  startDate={startDate}
+                  endDate={endDate}
+                  minDate={startDate}
+                  monthsShown={2}
+                  closeOnScroll={true}
+                  dateFormat="dd/MM/yyyy"
+                />
+              </div>
+            </div>
           </div>
           <div id="roombox">
             <div>
@@ -92,7 +127,7 @@ export default function Booking() {
                       Availbilty Calender <RiArrowDownSLine />
                     </p>
                     {/* <button id="selbed">Select Bed</button> */}
-                    <Counter />
+                    <Counter1 />
                   </div>
                 </div>
               </div>
