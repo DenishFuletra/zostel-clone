@@ -1,18 +1,12 @@
-import "./App.css";
-import Home from "../src/Component/Home/Home";
-import Navbar from "../src/Component/Navbar/Navbar";
-import RouteComponent from "./Component/Routes/Route";
+//import "./App.css";
+import Cart from "./Component/Cart/Cart";
 
-
-export default function App() {
-
+function App() {
   return (
-    <div className="App" >
-      <Navbar />
-      {/* <Home /> */}
-      <RouteComponent />
-
-
+    <div className="App">
+      <Cart />
     </div>
   );
 }
+
+export default App;

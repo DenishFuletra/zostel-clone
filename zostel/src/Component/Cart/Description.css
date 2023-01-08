@@ -1,0 +1,213 @@
+table {
+  width: 100%;
+}
+
+#head {
+  color: blueviolet;
+}
+#amenities {
+  width: 600px;
+}
+#amicon {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+#ws {
+  border: 1.8px solid rgb(227, 226, 226);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 150px;
+  border-radius: 10px;
+  height: 50px;
+  color: rgb(236, 68, 22);
+}
+#name {
+  color: red;
+}
+#direction {
+  font-weight: 600;
+  border: 1.8px solid rgb(227, 226, 226);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 200px;
+  border-radius: 10px;
+  height: 50px;
+}
+#maxmin {
+  border: 0px;
+  cursor: pointer;
+}
+#getDirection {
+  border: 1.8px solid rgb(227, 226, 226);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 150px;
+  border-radius: 10px;
+  height: 50px;
+  color: rgb(236, 68, 22);
+  cursor: pointer;
+}
+#maxmin {
+  background: none;
+  font-size: larger;
+}
+#mapframe {
+  border: 2px solid blue;
+}
+#bookmain {
+  margin: auto;
+
+  width: 1200px;
+  display: flex;
+}
+#bookroomdiv {
+  width: 800px;
+}
+#booksum {
+  width: 400px;
+  margin: 10px;
+}
+#bookhead {
+  display: flex;
+  align-items: center;
+}
+#main {
+  background-color: #e8f0f2;
+}
+#roomname {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#selbeddiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#bedroom {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  margin: 10px;
+  height: 180px;
+  border-radius: 10px;
+}
+#bedroom:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+#roomdetails {
+  padding: 30px;
+}
+#roomdesc {
+  font-size: 13px;
+}
+#finalval {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -25px;
+}
+#tax2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -25px;
+}
+#tax {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -25px;
+}
+#payval {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -25px;
+}
+#booknow {
+  width: 400px;
+  height: 50px;
+  background-color: #f15824;
+  border: 0px;
+  color: #e8f0f2;
+  font-weight: 800;
+  font-size: 15px;
+  border-radius: 10px;
+}
+#bookbtn {
+  display: flex;
+  justify-content: center;
+}
+#selbed {
+  background-color: #f15824;
+  border: 0px;
+  height: 30px;
+  border-radius: 10px;
+  color: #e8f0f2;
+  font-weight: bold;
+  width: 90px;
+}
+#selbed:hover {
+  background-color: #ffffff;
+  color: #f15824;
+  cursor: pointer;
+  border: 1px solid gainsboro;
+}
+#descrbtn {
+  background-color: #f15824;
+  color: #ffffff;
+  border: 0px;
+  height: 31px;
+  width: 30px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#incrbtn {
+  background-color: #f15824;
+  color: #ffffff;
+  border: 0px;
+  height: 31px;
+  width: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#countval {
+  height: 30px;
+  border: 0px;
+  text-align: end;
+  width: 30px;
+  background-color: #e8f0f2;
+}
+#cal .react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--in-selecting-range,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__year-text--in-range {
+  border-radius: 0.3rem;
+  background-color: #f15824;
+  color: #fff;
+}
+#cal .react-datepicker__day--in-selecting-range {
+  border-radius: 0.3rem;
+  background-color: #f15824;
+
+  color: #fff;
+}
+#calender {
+  background-color: #f15824;
+}
