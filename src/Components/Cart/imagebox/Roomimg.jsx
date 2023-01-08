@@ -7,8 +7,8 @@ function Roomimg10bed() {
   ) || [""];
   return (
     <HeroSlider
-      width={"200px"}
-      height={"200px"}
+      width={"180px"}
+      height={"180px"}
       autoplay
       controller={{
         initialSlide: 1,
@@ -51,8 +51,8 @@ function Roomimg6bed() {
   ) || [""];
   return (
     <HeroSlider
-      width={"200px"}
-      height={"200px"}
+      width={"180px"}
+      height={"180px"}
       autoplay
       controller={{
         initialSlide: 1,
@@ -96,8 +96,8 @@ function Roomimg4bed() {
 
   return (
     <HeroSlider
-      width={"200px"}
-      height={"200px"}
+      width={"180px"}
+      height={"180px"}
       autoplay
       controller={{
         initialSlide: 1,

@@ -65,10 +65,11 @@ table {
   display: flex;
 }
 #bookroomdiv {
-  width: 900px;
+  width: 800px;
 }
 #booksum {
-  width: 300px;
+  width: 400px;
+  margin: 10px;
 }
 #bookhead {
   display: flex;
@@ -81,7 +82,6 @@ table {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 10px;
 }
 #selbeddiv {
   display: flex;
@@ -92,11 +92,95 @@ table {
   display: flex;
   align-items: center;
   background-color: #ffffff;
-  margin: 15px;
-  height: 200px;
+  margin: 10px;
+  height: 180px;
   border-radius: 10px;
-  width: 870px;
+}
+#bedroom:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
 }
 #roomdetails {
   padding: 30px;
+}
+#roomdesc {
+  font-size: 13px;
+}
+#finalval {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -25px;
+}
+#tax2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -25px;
+}
+#tax {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -25px;
+}
+#payval {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -25px;
+}
+#booknow {
+  width: 400px;
+  height: 50px;
+  background-color: #f15824;
+  border: 0px;
+  color: #e8f0f2;
+  font-weight: 800;
+  font-size: 15px;
+  border-radius: 10px;
+}
+#bookbtn {
+  display: flex;
+  justify-content: center;
+}
+#selbed {
+  background-color: #f15824;
+  border: 0px;
+  height: 30px;
+  border-radius: 10px;
+  color: #e8f0f2;
+  font-weight: bold;
+  width: 90px;
+}
+#selbed:hover {
+  background-color: #ffffff;
+  color: #f15824;
+  cursor: pointer;
+  border: 1px solid gainsboro;
+}
+#descrbtn {
+  background-color: #f15824;
+  color: #ffffff;
+  border: 0px;
+  height: 31px;
+  width: 30px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#incrbtn {
+  background-color: #f15824;
+  color: #ffffff;
+  border: 0px;
+  height: 31px;
+  width: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#countval {
+  height: 30px;
+  border: 0px;
+  text-align: end;
+  width: 30px;
+  background-color: #e8f0f2;
 }

@@ -15,14 +15,28 @@ import LocalCafeIcon from "@mui/icons-material/LocalCafe";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import WbIncandescentIcon from "@mui/icons-material/WbIncandescent";
 import LocalLaundryService from "@mui/icons-material/LocalLaundryService";
+import SummaryBox from "./SummaryBox";
+import { useState } from "react";
+import Counter from "../Loader/Counter";
 export default function Booking() {
+  const [showPrice, setshowPrice] = useState(false);
+  const [bedcount, setbedcount] = useState({
+    room1: 0,
+    room2: 1,
+    room3: 3,
+  });
+  const [showbtn, setshowbtn] = useState({
+    roombtn1: false,
+    roombtn2: false,
+    roombtn3: false,
+  });
   return (
     <div id="main">
       <div id="bookmain">
         <div id="bookroomdiv">
           <div id="bookhead">
             <div>
-              <h1>Book Your Stay</h1>
+              <h1>Book your stay</h1>
               <p>Select from a range of beautiful rooms</p>
             </div>
             <div>
@@ -49,14 +63,14 @@ export default function Booking() {
                   <p
                     style={{
                       display: "flex",
-                      fontSize: "12px",
+                      fontSize: "13px",
                       alignItems: "center",
-                      marginTop: "-10px",
+                      marginTop: "-14px",
                     }}
                   >
-                    <PersonIcon /> x 1
+                    <PersonIcon fontSize="15px" /> x 1
                   </p>
-                  <p>
+                  <p id="roomdesc">
                     A bed in a mixed dormitory with private lockers, AC, and a
                     shared en-suite washroom.
                   </p>
@@ -77,7 +91,8 @@ export default function Booking() {
                     <p>
                       Availbilty Calender <RiArrowDownSLine />
                     </p>
-                    <button id="selbed">Select Bed</button>
+                    {/* <button id="selbed">Select Bed</button> */}
+                    <Counter />
                   </div>
                 </div>
               </div>
@@ -89,7 +104,7 @@ export default function Booking() {
                 </div>
                 <div id="roomdetails">
                   <div id="roomname">
-                    <h3>4 Bed Mixed Dorm(Ensuite)</h3>
+                    <h3>6 Bed Mixed Dorm(Ensuite)</h3>
                     <p>
                       <strong>₹749</strong>/night
                     </p>
@@ -97,14 +112,14 @@ export default function Booking() {
                   <p
                     style={{
                       display: "flex",
-                      fontSize: "12px",
+                      fontSize: "13px",
                       alignItems: "center",
-                      marginTop: "-10px",
+                      marginTop: "-14px",
                     }}
                   >
-                    <PersonIcon /> x 1
+                    <PersonIcon fontSize="15px" /> x 1
                   </p>
-                  <p>
+                  <p id="roomdesc">
                     A bed in a mixed dormitory with private lockers, AC, and a
                     shared en-suite washroom.
                   </p>
@@ -137,7 +152,7 @@ export default function Booking() {
                 </div>
                 <div id="roomdetails">
                   <div id="roomname">
-                    <h3>4 Bed Mixed Dorm(Ensuite)</h3>
+                    <h3>10 Bed Mixed Dorm(Ensuite)</h3>
                     <p>
                       <strong>₹749</strong>/night
                     </p>
@@ -145,14 +160,14 @@ export default function Booking() {
                   <p
                     style={{
                       display: "flex",
-                      fontSize: "12px",
+                      fontSize: "13px",
                       alignItems: "center",
-                      marginTop: "-10px",
+                      marginTop: "-14px",
                     }}
                   >
-                    <PersonIcon /> x 1
+                    <PersonIcon fontSize="15px" /> x 1
                   </p>
-                  <p>
+                  <p id="roomdesc">
                     A bed in a mixed dormitory with private lockers, AC, and a
                     shared en-suite washroom.
                   </p>
@@ -186,7 +201,8 @@ export default function Booking() {
             <strong>46 Nights</strong> starting from{" "}
             <strong>Wed 11 Jan, 2023</strong>
           </p>
-          <Manlogo />
+          {/* <Manlogo /> */}
+          <SummaryBox />
         </div>
       </div>
     </div>
