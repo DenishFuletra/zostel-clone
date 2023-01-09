@@ -2,9 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { ContextData } from "../Context/ContextData";
 function Counter1() {
-  const { countRoom, setroom1, setroom2, setroom3 } = useContext(ContextData);
-
-  console.log(countRoom.room1, countRoom.room2, countRoom.room3);
+  const { countRoom, setroom1 } = useContext(ContextData);
   return (
     <div>
       <div>
@@ -42,9 +40,7 @@ function Counter1() {
   );
 }
 function Counter2() {
-  const { countRoom, setroom1, setroom2, setroom3 } = useContext(ContextData);
-
-  console.log(countRoom.room1, countRoom.room2, countRoom.room3);
+  const { countRoom, setroom2 } = useContext(ContextData);
   return (
     <div>
       <div>
@@ -85,9 +81,7 @@ function Counter2() {
   );
 }
 function Counter3() {
-  const { countRoom, setroom1, setroom2, setroom3 } = useContext(ContextData);
-
-  console.log(countRoom.room1, countRoom.room2, countRoom.room3);
+  const { countRoom, setroom3 } = useContext(ContextData);
   return (
     <div>
       <div>

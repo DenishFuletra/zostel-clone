@@ -19,24 +19,36 @@ export default function Address() {
       style={
         box
           ? {
-            width: "1200px",
-            margin: "auto",
-            height: "600px",
-            transition: "2s",
-          }
+              width: "1200px",
+              margin: "auto",
+              height: "600px",
+              transition: "2s",
+            }
           : { width: "1200px", margin: "auto" }
       }
     >
-      <h2 id="name">Locate Us</h2>
+      <p id="name">Locate Us</p>
       <div style={{ height: "300px", display: "flex" }}>
         <div
           id="address"
           style={{ width: "400px", height: "300px", marginTop: "10px" }}
         >
-          <h4>Address:</h4>
-          <p>{data.address}</p>
+          <p style={{ fontFamily: "CircularStdBlack", color: "#4b4848" }}>
+            Address:
+          </p>
+          <p style={{ color: "#4b4848", fontFamily: "CircularStdMedium" }}>
+            {data.address}
+          </p>
 
-          <h5>Contact:{data.contact}</h5>
+          <p
+            style={{
+              fontFamily: "CircularStdBlack",
+              color: "#4b4848",
+              marginTop: "10px",
+            }}
+          >
+            Contact:{data.contact}
+          </p>
           <div id="ws" style={{ marginTop: "10px" }}>
             <BsWhatsapp size="20px" /> <p> Whatsapp us</p>
           </div>
@@ -58,10 +70,10 @@ export default function Address() {
             style={
               box
                 ? {
-                  display: "grid",
-                  border: "1.8px solid rgb(227, 226, 226)",
-                  height: "300px",
-                }
+                    display: "grid",
+                    border: "1.8px solid rgb(227, 226, 226)",
+                    height: "300px",
+                  }
                 : { display: "none" }
             }
           >
