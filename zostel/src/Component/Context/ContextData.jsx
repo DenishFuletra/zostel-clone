@@ -2,9 +2,9 @@ import { createContext, useState } from "react";
 export const ContextData = createContext();
 function ContextDataProvider({ children }) {
   const [countRoom, setcountRoom] = useState({
-    room1: 1,
-    room2: 1,
-    room3: 1,
+    room1: 0,
+    room2: 0,
+    room3: 0,
   });
   function setroom1(val) {
     setcountRoom({ ...countRoom, room1: val });

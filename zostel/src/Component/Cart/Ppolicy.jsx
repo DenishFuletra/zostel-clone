@@ -4,7 +4,7 @@ export default function Ppolicy() {
   return (
     <div style={{ width: "1200px", margin: "auto" }}>
       <h2>Property Policy</h2>
-      <div>
+      <div id="ppolicy">
         <p>
           - Guests are required to pay a 21% advance at the time of booking
           itself.

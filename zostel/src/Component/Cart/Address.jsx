@@ -21,7 +21,7 @@ export default function Address() {
           ? {
               width: "1200px",
               margin: "auto",
-              height: "700px",
+              height: "600px",
               transition: "2s",
             }
           : { width: "1200px", margin: "auto" }
@@ -29,18 +29,22 @@ export default function Address() {
     >
       <h2 id="name">Locate Us</h2>
       <div style={{ height: "300px", display: "flex" }}>
-        <div id="address" style={{ width: "400px", height: "300px" }}>
+        <div
+          id="address"
+          style={{ width: "400px", height: "300px", marginTop: "10px" }}
+        >
           <h4>Address:</h4>
-          <p style={{ marginTop: "-15px" }}>{data.address}</p>
+          <p>{data.address}</p>
 
-          <h5 style={{ marginTop: "-10px" }}>Contact:{data.contact}</h5>
-          <div id="ws">
+          <h5>Contact:{data.contact}</h5>
+          <div id="ws" style={{ marginTop: "10px" }}>
             <BsWhatsapp size="20px" /> <p> Whatsapp us</p>
           </div>
           <div id="direction">
-            <p>Directions</p>
+            <p style={{ marginLeft: "10px" }}>Directions</p>
             <button
               id="maxmin"
+              style={{ marginLeft: "10px" }}
               onClick={() => {
                 {
                   box ? setbox(false) : setbox(true);
@@ -50,7 +54,17 @@ export default function Address() {
               {box ? <RiArrowUpSLine /> : <RiArrowDownSLine />}
             </button>
           </div>
-          <div style={box ? { display: "grid" } : { display: "none" }}>
+          <div
+            style={
+              box
+                ? {
+                    display: "grid",
+                    border: "1.8px solid rgb(227, 226, 226)",
+                    height: "300px",
+                  }
+                : { display: "none" }
+            }
+          >
             <p>
               Ask for Vijay Amusement part. Walk North on Beach Road for 500
               meters, and you’ll reach a junction. On the opposite right corner,
@@ -70,11 +84,17 @@ export default function Address() {
             </p>
           </div>
           <div id="getDirection">
-            <MdMap size="20px"></MdMap>
+            <MdMap
+              size="20px"
+              style={{ marginLeft: "10px", marginRight: "10px" }}
+            ></MdMap>
             <p>Get directions</p>
           </div>
         </div>
-        <div id="map" style={{ height: "300px", width: "800px" }}>
+        <div
+          id="map"
+          style={{ height: "300px", width: "800px", marginLeft: "30px" }}
+        >
           <iframe
             style={{ width: "800px", height: "300px", borderRadius: "10px" }}
             src={data.location}

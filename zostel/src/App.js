@@ -1,19 +1,16 @@
-import "./App.css";
-import Home from "../src/Component/Home/Home";
+//import "./App.css";
+import Cart from "./Component/Cart/Cart";
 import Navbar from "../src/Component/Navbar/Navbar";
 import RouteComponent from "./Component/Routes/Route";
-import Cart from "./Component/Cart/Cart";
+import Footer from "./Component/Footer/Footer";
 
 function App() {
   return (
-    <div className="App" >
+    <div className="App">
       <Navbar />
       {/* <Home /> */}
       <RouteComponent />
-      <Cart />
-
-
-
+    <Footer />
     </div>
   );
 }

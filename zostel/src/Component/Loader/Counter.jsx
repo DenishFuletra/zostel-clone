@@ -13,13 +13,11 @@ function Counter1() {
           onClick={() => {
             var val = document.getElementById("countval").value;
             if (val > 0) {
-              val--;
+              val = val - 1;
+              setroom1(val);
             }
 
             document.getElementById("countval").value = val;
-
-            setroom1(val);
-            console.log(val);
           }}
         >
           -
@@ -29,13 +27,12 @@ function Counter1() {
           id="incrbtn"
           onClick={() => {
             var val = document.getElementById("countval").value;
-
-            val = +val + 1;
-            console.log(val);
+            if (val <= 20) {
+              val = +val + 1;
+              setroom1(val);
+            }
 
             document.getElementById("countval").value = val;
-            setroom1(val);
-            console.log(val);
           }}
         >
           +
@@ -45,37 +42,40 @@ function Counter1() {
   );
 }
 function Counter2() {
-  const { countRoom } = useContext(ContextData);
-  const { room2 } = useContext(ContextData);
-  console.log(countRoom.room2);
+  const { countRoom, setroom1, setroom2, setroom3 } = useContext(ContextData);
+
+  console.log(countRoom.room1, countRoom.room2, countRoom.room3);
   return (
     <div>
       <div>
         <button
           id="descrbtn"
           onClick={() => {
-            let val = document.getElementById("countval").value;
+            var val = document.getElementById("countval2").value;
             if (val > 0) {
-              val--;
+              val = val - 1;
+              setroom2(val);
             }
 
-            document.getElementById("countval").value = val;
-            room2(val);
+            document.getElementById("countval2").value = val;
+            setroom2(val);
           }}
         >
           -
         </button>
-        <input type="number" id="countval" min={1} max={10} value={1} />
+
+        <input type="number" id="countval2" value={countRoom.room2} />
+
         <button
           id="incrbtn"
           onClick={() => {
-            let val = document.getElementById("countval").value;
+            var val = document.getElementById("countval2").value;
             if (val <= 20) {
-              val++;
+              val = +val + 1;
+              setroom2(val);
             }
 
-            document.getElementById("countval").value = val;
-            room2(val);
+            document.getElementById("countval2").value = val;
           }}
         >
           +
@@ -85,37 +85,37 @@ function Counter2() {
   );
 }
 function Counter3() {
-  const { countRoom } = useContext(ContextData);
-  const { room3 } = useContext(ContextData);
-  console.log(countRoom.room3);
+  const { countRoom, setroom1, setroom2, setroom3 } = useContext(ContextData);
+
+  console.log(countRoom.room1, countRoom.room2, countRoom.room3);
   return (
     <div>
       <div>
         <button
           id="descrbtn"
           onClick={() => {
-            let val = document.getElementById("countval").value;
+            var val = document.getElementById("countval3").value;
             if (val > 0) {
-              val--;
+              val = val - 1;
+              setroom3(val);
             }
 
-            document.getElementById("countval").value = val;
-            room3(val);
+            document.getElementById("countval3").value = val;
           }}
         >
           -
         </button>
-        <input type="number" id="countval" min={1} max={10} value={1} />
+        <input type="number" id="countval3" value={countRoom.room3} />
         <button
           id="incrbtn"
           onClick={() => {
-            let val = document.getElementById("countval").value;
+            var val = document.getElementById("countval3").value;
             if (val <= 20) {
-              val++;
+              val = +val + 1;
+              setroom3(val);
             }
 
-            document.getElementById("countval").value = val;
-            room3(val);
+            document.getElementById("countval3").value = val;
           }}
         >
           +

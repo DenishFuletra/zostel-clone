@@ -17,9 +17,10 @@ import LocalCafeIcon from "@mui/icons-material/LocalCafe";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import WbIncandescentIcon from "@mui/icons-material/WbIncandescent";
 import LocalLaundryService from "@mui/icons-material/LocalLaundryService";
+import EastIcon from "@mui/icons-material/East";
 import SummaryBox from "./SummaryBox";
 import { useState } from "react";
-import { Counter1 } from "../Loader/Counter";
+import { Counter1, Counter2, Counter3 } from "../Loader/Counter";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 export default function Booking() {
@@ -27,11 +28,7 @@ export default function Booking() {
   console.log(selectedOption);
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
-  const [showbtn, setshowbtn] = useState({
-    roombtn1: false,
-    roombtn2: false,
-    roombtn3: false,
-  });
+  const { countRoom, setroom1, setroom2, setroom3 } = useContext(ContextData);
   console.log(startDate, endDate);
   // let val = document.getElementById("countval").value;
   // console.log(val);
@@ -41,11 +38,15 @@ export default function Booking() {
         <div id="bookroomdiv">
           <div id="bookhead">
             <div>
-              <h1>Book your stay</h1>
-              <p>Select from a range of beautiful rooms</p>
+              <h1 style={{ fontFamily: "CircularStdBlack", marginTop: "35px" }}>
+                Book your stay
+              </h1>
+              <p style={{ fontFamily: "CircularStdMedium", color: "#4b4848" }}>
+                Select from a range of beautiful rooms
+              </p>
             </div>
             <div>
-              <button style={{ display: "flex" }}>
+              <button style={{ display: "flex", margin: "20px" }}>
                 <strong style={{ fontSize: "15px" }}>INR</strong>{" "}
                 <RiArrowDownSLine color="rgb(236, 68, 22)" fontSize="20px" />
               </button>
@@ -58,14 +59,19 @@ export default function Booking() {
                   selectsStart
                   monthsShown={2}
                   startDate={startDate}
-                  dateFormat="dd/MM/yyyy"
+                  dateFormat="E dd MMMM,yyyy"
                   endDate={endDate}
                   minDate={new Date()}
                   // excludeDates={[new Date(), subDays(new Date(), 1)]}
                 />
               </div>
               <div>
-                <i class="fa-solid fa-right-long"></i>
+                <EastIcon
+                  style={{
+                    background: "white",
+                    height: "40px",
+                  }}
+                />
               </div>
               <div>
                 <DatePicker
@@ -77,7 +83,7 @@ export default function Booking() {
                   minDate={startDate}
                   monthsShown={2}
                   closeOnScroll={true}
-                  dateFormat="dd/MM/yyyy"
+                  dateFormat="E dd MMMM,yyyy"
                 />
               </div>
             </div>
@@ -88,8 +94,8 @@ export default function Booking() {
                 <div id="roomimg">
                   <Roomimg4bed />
                 </div>
-                <div id="roomdetails">
-                  <div id="roomname">
+                <div id="roomdetails2">
+                  <div id="roomname2">
                     <h3>4 Bed Mixed Dorm(Ensuite)</h3>
                     <p>
                       <strong>₹749</strong>/night
@@ -100,12 +106,11 @@ export default function Booking() {
                       display: "flex",
                       fontSize: "13px",
                       alignItems: "center",
-                      marginTop: "-14px",
                     }}
                   >
                     <PersonIcon fontSize="15px" /> x 1
                   </p>
-                  <p id="roomdesc">
+                  <p id="roomdesc2">
                     A bed in a mixed dormitory with private lockers, AC, and a
                     shared en-suite washroom.
                   </p>
@@ -122,12 +127,22 @@ export default function Booking() {
                     <CelebrationIcon fontSize="15px" />
                     <SportsEsportsIcon fontSize="15px" />
                   </div>
-                  <div id="selbeddiv">
+                  <div id="selbeddiv2">
                     <p>
                       Availbilty Calender <RiArrowDownSLine />
                     </p>
-                    {/* <button id="selbed">Select Bed</button> */}
-                    <Counter1 />
+                    {countRoom.room1 > 0 ? (
+                      <Counter1 />
+                    ) : (
+                      <button
+                        id="selbed2"
+                        onClick={() => {
+                          setroom1(1);
+                        }}
+                      >
+                        Select Bed
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -137,8 +152,8 @@ export default function Booking() {
                 <div id="roomimg">
                   <Roomimg6bed />
                 </div>
-                <div id="roomdetails">
-                  <div id="roomname">
+                <div id="roomdetails2">
+                  <div id="roomname2">
                     <h3>6 Bed Mixed Dorm(Ensuite)</h3>
                     <p>
                       <strong>₹749</strong>/night
@@ -149,12 +164,11 @@ export default function Booking() {
                       display: "flex",
                       fontSize: "13px",
                       alignItems: "center",
-                      marginTop: "-14px",
                     }}
                   >
                     <PersonIcon fontSize="15px" /> x 1
                   </p>
-                  <p id="roomdesc">
+                  <p id="roomdesc2">
                     A bed in a mixed dormitory with private lockers, AC, and a
                     shared en-suite washroom.
                   </p>
@@ -171,11 +185,22 @@ export default function Booking() {
                     <CelebrationIcon fontSize="15px" />
                     <SportsEsportsIcon fontSize="15px" />
                   </div>
-                  <div id="selbeddiv">
+                  <div id="selbeddiv2">
                     <p>
                       Availbilty Calender <RiArrowDownSLine />
                     </p>
-                    <button id="selbed">Select Bed</button>
+                    {countRoom.room2 > 0 ? (
+                      <Counter2 />
+                    ) : (
+                      <button
+                        id="selbed2"
+                        onClick={() => {
+                          setroom2(1);
+                        }}
+                      >
+                        Select Bed
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -185,8 +210,8 @@ export default function Booking() {
                 <div id="roomimg">
                   <Roomimg10bed />
                 </div>
-                <div id="roomdetails">
-                  <div id="roomname">
+                <div id="roomdetails2">
+                  <div id="roomname2">
                     <h3>10 Bed Mixed Dorm(Ensuite)</h3>
                     <p>
                       <strong>₹749</strong>/night
@@ -197,12 +222,11 @@ export default function Booking() {
                       display: "flex",
                       fontSize: "13px",
                       alignItems: "center",
-                      marginTop: "-14px",
                     }}
                   >
                     <PersonIcon fontSize="15px" /> x 1
                   </p>
-                  <p id="roomdesc">
+                  <p id="roomdesc2">
                     A bed in a mixed dormitory with private lockers, AC, and a
                     shared en-suite washroom.
                   </p>
@@ -219,11 +243,22 @@ export default function Booking() {
                     <CelebrationIcon fontSize="15px" />
                     <SportsEsportsIcon fontSize="15px" />
                   </div>
-                  <div id="selbeddiv">
+                  <div id="selbeddiv2">
                     <p>
                       Availbilty Calender <RiArrowDownSLine />
                     </p>
-                    <button id="selbed">Select Bed</button>
+                    {countRoom.room3 > 0 ? (
+                      <Counter3 />
+                    ) : (
+                      <button
+                        id="selbed2"
+                        onClick={() => {
+                          setroom3(1);
+                        }}
+                      >
+                        Select Bed
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>

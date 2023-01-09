@@ -29,11 +29,18 @@ export default function Description() {
   };
 
   return (
-    <div style={{ display: "flex", width: "1200px", margin: "auto" }}>
-      <div style={{ width: "600px" }}>
+    <div
+      style={{
+        display: "flex",
+        width: "1200px",
+        margin: "auto",
+        alignItems: "center",
+      }}
+    >
+      <div id="firstdiv" style={{ width: "600px" }}>
         <h1 id="head">Zostel {data.cityname}</h1>
-        <p style={{ marginTop: "-10px" }}>{data.descr}</p>
-        <h4>Recommended experiences:</h4>
+        <p>{data.descr}</p>
+        <h4 style={{ marginTop: "30px" }}>Recommended experiences:</h4>
         <p>{data.recexp}</p>
       </div>
       <div id="amenities">

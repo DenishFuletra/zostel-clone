@@ -2,9 +2,9 @@ import React from "react";
 
 export default function CPolicy() {
   return (
-    <div style={{ width: "1200px", margin: "auto" }}>
+    <div style={{ width: "1200px", margin: "auto", marginTop: "20px" }}>
       <h2>Cancellation Policy</h2>
-      <div>
+      <div id="cpolicy">
         <p>
           We understand that sometimes plans change. Hence, to make it light on
           your pocket, we are only charging a 21% advance, which is on a
@@ -25,7 +25,7 @@ export default function CPolicy() {
           amount shall be adjusted against the cancellation fee.
         </p>
       </div>
-      <div>
+      <div id="cpolicy">
         <h4>/For Arrivals from 23rd Dec to 01st Jan:</h4>
         <p>
           - All booking requests will be confirmed at a 100% advance payment at
@@ -47,7 +47,7 @@ export default function CPolicy() {
           future booking at any of our properties.
         </p>
       </div>
-      <div>
+      <div id="cpolicy">
         <p>
           For any other queries, please reach out to us at
           reservations@zostel.com.
