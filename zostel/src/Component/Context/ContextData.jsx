@@ -5,6 +5,9 @@ function ContextDataProvider({ children }) {
     room1: 0,
     room2: 0,
     room3: 0,
+    room1name: "4 Bed Mixed Dorm(Ensuite)",
+    room2name: "6 Bed Mixed Dorm (shared washroom)",
+    room3name: "10 Bed Mixed Dorm (shared washroom)",
   });
   function setroom1(val) {
     setcountRoom({ ...countRoom, room1: val });

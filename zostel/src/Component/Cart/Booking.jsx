@@ -24,12 +24,19 @@ import { Counter1, Counter2, Counter3 } from "../Loader/Counter";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 export default function Booking() {
-  const [selectedOption, setSelectedOption] = useState(null);
-  console.log(selectedOption);
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
-  const { countRoom, setroom1, setroom2, setroom3 } = useContext(ContextData);
-  console.log(startDate, endDate);
+  let data = JSON.parse(localStorage.getItem("data"));
+  const [startDate, setStartDate] = useState(new Date(data.startDate));
+  const [endDate, setEndDate] = useState(new Date(data.endDate));
+  const {
+    countRoom,
+    setroom1,
+    setroom2,
+    setroom3,
+    room1name,
+    room2name,
+    room3name,
+  } = useContext(ContextData);
+
   // let val = document.getElementById("countval").value;
   // console.log(val);
   return (
@@ -46,16 +53,45 @@ export default function Booking() {
               </p>
             </div>
             <div>
-              <button style={{ display: "flex", margin: "20px" }}>
-                <strong style={{ fontSize: "15px" }}>INR</strong>{" "}
+              <button
+                style={{
+                  display: "flex",
+                  margin: "20px",
+                  border: "0px",
+                  color: "#f15824",
+                  fontSize: "17px",
+                  fontFamily: "CircularStdBold",
+                }}
+              >
+                <strong>INR</strong>{" "}
                 <RiArrowDownSLine color="rgb(236, 68, 22)" fontSize="20px" />
               </button>
             </div>
             <div id="cal">
-              <div>
+              <div
+                onClick={() => {
+                  //setStartDate(startDate);
+                  // setEndDate(endDate);
+                  let data = {
+                    startDate: startDate,
+                    endDate: endDate,
+                  };
+                  localStorage.setItem("data", JSON.stringify(data));
+                  let data2 = JSON.parse(localStorage.getItem("data"));
+                  console.log(data2);
+                  console.log("hello");
+                }}
+              >
                 <DatePicker
                   selected={startDate}
-                  onChange={(date) => setStartDate(date)}
+                  onChange={(date) => {
+                    setStartDate(date);
+                    let data = {
+                      startDate: date,
+                      endDate: endDate,
+                    };
+                    localStorage.setItem("data", JSON.stringify(data));
+                  }}
                   selectsStart
                   monthsShown={2}
                   startDate={startDate}
@@ -76,7 +112,14 @@ export default function Booking() {
               <div>
                 <DatePicker
                   selected={endDate}
-                  onChange={(date) => setEndDate(date)}
+                  onChange={(date) => {
+                    setEndDate(date);
+                    let data = {
+                      startDate: startDate,
+                      endDate: date,
+                    };
+                    localStorage.setItem("data", JSON.stringify(data));
+                  }}
                   selectsEnd
                   startDate={startDate}
                   endDate={endDate}
@@ -96,19 +139,13 @@ export default function Booking() {
                 </div>
                 <div id="roomdetails2">
                   <div id="roomname2">
-                    <h3>4 Bed Mixed Dorm(Ensuite)</h3>
-                    <p>
-                      <strong>₹749</strong>/night
+                    <h3>{countRoom.room1name}</h3>
+                    <p id="pricetag">
+                      <strong>₹949</strong>/<strong id="night">night</strong>
                     </p>
                   </div>
-                  <p
-                    style={{
-                      display: "flex",
-                      fontSize: "13px",
-                      alignItems: "center",
-                    }}
-                  >
-                    <PersonIcon fontSize="15px" /> x 1
+                  <p id="personicon">
+                    <PersonIcon fontSize="18px" /> x 1
                   </p>
                   <p id="roomdesc2">
                     A bed in a mixed dormitory with private lockers, AC, and a
@@ -128,7 +165,7 @@ export default function Booking() {
                     <SportsEsportsIcon fontSize="15px" />
                   </div>
                   <div id="selbeddiv2">
-                    <p>
+                    <p id="availcal">
                       Availbilty Calender <RiArrowDownSLine />
                     </p>
                     {countRoom.room1 > 0 ? (
@@ -154,18 +191,12 @@ export default function Booking() {
                 </div>
                 <div id="roomdetails2">
                   <div id="roomname2">
-                    <h3>6 Bed Mixed Dorm(Ensuite)</h3>
-                    <p>
-                      <strong>₹749</strong>/night
+                    <h3>{countRoom.room2name}</h3>
+                    <p id="pricetag">
+                      <strong>₹749</strong>/<strong id="night">night</strong>
                     </p>
                   </div>
-                  <p
-                    style={{
-                      display: "flex",
-                      fontSize: "13px",
-                      alignItems: "center",
-                    }}
-                  >
+                  <p id="personicon">
                     <PersonIcon fontSize="15px" /> x 1
                   </p>
                   <p id="roomdesc2">
@@ -186,7 +217,7 @@ export default function Booking() {
                     <SportsEsportsIcon fontSize="15px" />
                   </div>
                   <div id="selbeddiv2">
-                    <p>
+                    <p id="availcal">
                       Availbilty Calender <RiArrowDownSLine />
                     </p>
                     {countRoom.room2 > 0 ? (
@@ -212,18 +243,12 @@ export default function Booking() {
                 </div>
                 <div id="roomdetails2">
                   <div id="roomname2">
-                    <h3>10 Bed Mixed Dorm(Ensuite)</h3>
-                    <p>
-                      <strong>₹749</strong>/night
+                    <h3>{countRoom.room3name}</h3>
+                    <p id="pricetag">
+                      <strong>₹649</strong>/<strong id="night">night</strong>
                     </p>
                   </div>
-                  <p
-                    style={{
-                      display: "flex",
-                      fontSize: "13px",
-                      alignItems: "center",
-                    }}
-                  >
+                  <p id="personicon">
                     <PersonIcon fontSize="15px" /> x 1
                   </p>
                   <p id="roomdesc2">
@@ -244,7 +269,7 @@ export default function Booking() {
                     <SportsEsportsIcon fontSize="15px" />
                   </div>
                   <div id="selbeddiv2">
-                    <p>
+                    <p id="availcal">
                       Availbilty Calender <RiArrowDownSLine />
                     </p>
                     {countRoom.room3 > 0 ? (
@@ -266,11 +291,6 @@ export default function Booking() {
           </div>
         </div>
         <div id="booksum">
-          <h2>Summary</h2>
-          <p>
-            <strong>46 Nights</strong> starting from{" "}
-            <strong>Wed 11 Jan, 2023</strong>
-          </p>
           {/* <Manlogo /> */}
           <SummaryBox />
         </div>

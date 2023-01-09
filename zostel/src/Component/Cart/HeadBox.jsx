@@ -1,11 +1,9 @@
-import { style } from "@mui/system";
-import { MdHotel } from "react-icons/md";
 import { useSelector } from "react-redux";
 export default function HeadBox() {
   const data = useSelector(
     (state) => state.locationReducer.locationdata.hotelimg
   );
-  console.log(data);
+
   return (
     <div
       style={{
