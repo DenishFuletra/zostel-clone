@@ -1,10 +1,12 @@
 table {
   width: 100%;
 }
+
 tr td {
   font-family: "CircularStdBold";
   color: #4b4848;
 }
+
 #firstdiv {
   font-family: "CircularStdBook";
   color: #4b4848;
@@ -12,21 +14,25 @@ tr td {
   margin-bottom: 30px;
   font-weight: 500;
 }
+
 #head {
   margin-top: 20px;
   color: #f15824;
   font-family: "CircularStdBlack";
   font-size: 36px;
 }
+
 #amenities {
   width: 600px;
   margin-left: 60px;
 }
+
 #amicon {
   display: flex;
   align-items: center;
   height: 30px;
 }
+
 #ws {
   border: 1.8px solid rgb(227, 226, 226);
   display: flex;
@@ -37,9 +43,11 @@ tr td {
   height: 50px;
   color: rgb(236, 68, 22);
 }
+
 #name {
   color: red;
 }
+
 #direction {
   font-weight: 600;
   border: 1.8px solid rgb(227, 226, 226);
@@ -51,10 +59,12 @@ tr td {
   justify-content: flex-start;
   height: 50px;
 }
+
 #maxmin {
   border: 0px;
   cursor: pointer;
 }
+
 #getDirection {
   border: 1.8px solid rgb(227, 226, 226);
   display: flex;
@@ -72,40 +82,49 @@ tr td {
   background: none;
   font-size: larger;
 }
+
 #mapframe {
   border: 2px solid blue;
 }
+
 #bookmain {
   margin: auto;
 
   width: 1200px;
   display: flex;
 }
+
 #bookroomdiv {
   width: 800px;
 }
+
 #booksum {
   width: 400px;
   margin: 10px;
 }
+
 #bookhead {
   display: flex;
   align-items: center;
 }
+
 #main {
   background-color: #e8f0f2;
 }
+
 #roomname2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 17px;
 }
+
 #selbeddiv2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 #bedroom {
   display: flex;
   align-items: center;
@@ -114,36 +133,44 @@ tr td {
   height: 180px;
   border-radius: 10px;
 }
+
 #bedroom:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
 }
+
 #roomdetails2 {
   padding: 50px;
 }
+
 #roomdesc2 {
   font-size: 13px;
 }
+
 #finalval2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 #tax22 {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 #tax22 {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 #payvall {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 #booknow {
   width: 400px;
   height: 50px;
@@ -154,10 +181,12 @@ tr td {
   font-size: 15px;
   border-radius: 10px;
 }
+
 #bookbtn {
   display: flex;
   justify-content: center;
 }
+
 #selbed2 {
   background-color: #f15824;
   border: 0px;
@@ -167,12 +196,14 @@ tr td {
   font-weight: bold;
   width: 90px;
 }
+
 #selbed2:hover {
   background-color: #ffffff;
   color: #f15824;
   cursor: pointer;
   border: 1px solid gainsboro;
 }
+
 #descrbtn {
   background-color: #f15824;
   color: #ffffff;
@@ -182,6 +213,7 @@ tr td {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
+
 #incrbtn {
   background-color: #f15824;
   color: #ffffff;
@@ -191,6 +223,7 @@ tr td {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
 #countval,
 #countval2,
 #countval3 {
@@ -200,6 +233,7 @@ tr td {
   width: 30px;
   background-color: #e8f0f2;
 }
+
 #cal .react-datepicker__day--selected,
 .react-datepicker__day--in-selecting-range,
 .react-datepicker__day--in-range,
@@ -218,25 +252,41 @@ tr td {
   background-color: #f15824;
   color: #fff;
 }
+
 #cal .react-datepicker__day--in-selecting-range {
   border-radius: 0.3rem;
   background-color: #f15824;
 
   color: #fff;
 }
+
 #cal {
   display: flex;
   background: "white";
   border-radius: 10px;
 }
-#cal .react-datepicker__input-container > input {
+
+#cal .react-datepicker__input-container>input {
   border: 0px;
   font-family: CircularStdMedium;
   height: 40px;
 }
-#ppolicy > p {
+
+#ppolicy>p {
   margin-top: 15px;
 }
-#cpolicy > p {
+
+#cpolicy>p {
   margin-top: 15px;
+}
+
+
+#cal {
+  border-radius: 10px;
+  overflow: hidden;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+#cal input{
+  padding-left: 15px;
 }

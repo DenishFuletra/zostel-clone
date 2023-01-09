@@ -31,6 +31,11 @@ export default function BookingComponent() {
   const [endDate, setEndDate] = useState(new Date());
   const [option, setOption] = useState("DESTINATION");
 
+
+
+
+
+
   let HandleSubmit = (e) => {
     e.preventDefault();
     let data = {
@@ -39,6 +44,14 @@ export default function BookingComponent() {
       endDate: endDate,
     };
     localStorage.setItem("data", JSON.stringify(data));
+    let date = JSON.parse(localStorage.getItem("data"));
+    console.log(date);
+    let end = new Date(date.endDate);
+    let start = new Date(date.startDate);
+    let difference = end.getTime() - start.getTime();
+    let TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
+    console.log(data.endDate);
+    console.log(TotalDays);
 
     console.log("hello");
   };
@@ -126,7 +139,7 @@ export default function BookingComponent() {
                   dateFormat="E dd MMM"
                   endDate={endDate}
                   minDate={new Date()}
-                  // excludeDates={[new Date(), subDays(new Date(), 1)]}
+                // excludeDates={[new Date(), subDays(new Date(), 1)]}
                 />
               </div>
             </div>
