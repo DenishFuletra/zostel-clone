@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "react-datepicker/dist/react-datepicker.css";
 import { useContext } from "react";
 import { ContextData } from "../Context/ContextData";
-export default function SummaryBox() {
+export default function SummaryBox2() {
   const { countRoom } = useContext(ContextData);
   let data = JSON.parse(localStorage.getItem("data"));
   function getDays() {
@@ -131,7 +131,7 @@ export default function SummaryBox() {
               to={"/confirmbooking"}
               style={{ textDecoration: "none", color: "white" }}
             >
-              Book now
+              Reserve
             </Link>
           </button>
         </div>

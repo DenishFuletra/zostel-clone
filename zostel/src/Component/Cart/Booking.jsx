@@ -27,6 +27,16 @@ export default function Booking() {
   let data = JSON.parse(localStorage.getItem("data"));
   const [startDate, setStartDate] = useState(new Date(data.startDate));
   const [endDate, setEndDate] = useState(new Date(data.endDate));
+  let start = new Date(data.startDate);
+  function getDays() {
+    let start = new Date(data.startDate);
+    let start2 = data.startDate;
+    let end = new Date(data.endDate);
+    let difference = end.getTime() - start.getTime();
+    let TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
+    return { TotalDays, start2 };
+  }
+  const days = getDays();
   const {
     countRoom,
     setroom1,
@@ -291,8 +301,23 @@ export default function Booking() {
           </div>
         </div>
         <div id="booksum">
-          {/* <Manlogo /> */}
-          <SummaryBox />
+          <h2>Summary</h2>
+          <p id="datadays">
+            <strong>{days.TotalDays} nights starting from</strong>
+            <p>
+              <DatePicker
+                selected={start}
+                selectsStart
+                monthsShown={2}
+                dateFormat="E dd MMMM,yyyy"
+              />
+            </p>
+          </p>
+          {countRoom.room1 || countRoom.room2 || countRoom.room3 > 0 ? (
+            <SummaryBox />
+          ) : (
+            <Manlogo />
+          )}
         </div>
       </div>
     </div>

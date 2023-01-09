@@ -304,3 +304,19 @@ tr td {
   background-color: #e8f0f2;
   margin-left: 5px;
 }
+#roomcount {
+  color: #4b4848;
+  font-family: "CircularStdMedium";
+  font-size: 15px;
+}
+#finalval3 {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+#tax2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}

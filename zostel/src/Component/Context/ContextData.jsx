@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 export const ContextData = createContext();
+
 function ContextDataProvider({ children }) {
   const [countRoom, setcountRoom] = useState({
     room1: 0,
@@ -8,6 +9,9 @@ function ContextDataProvider({ children }) {
     room1name: "4 Bed Mixed Dorm(Ensuite)",
     room2name: "6 Bed Mixed Dorm (shared washroom)",
     room3name: "10 Bed Mixed Dorm (shared washroom)",
+    room1price: 949,
+    room2price: 749,
+    room3price: 649,
   });
   function setroom1(val) {
     setcountRoom({ ...countRoom, room1: val });
