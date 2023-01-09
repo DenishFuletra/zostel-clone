@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
-#footer_main_p{
+#footer_main_p {
   margin-top: 25px;
 }
 
@@ -36,10 +36,10 @@
   color: white;
   text-align: left;
 }
-.listhead_div h2{
- text-align: left;
- margin-left: 38px;
- margin-top: 15px;
+.listhead_div h2 {
+  text-align: left;
+  margin-left: 38px;
+  margin-top: 15px;
 }
 .logo_div {
   padding-right: -250px;
@@ -107,10 +107,14 @@
     flex-wrap: wrap;
     margin: auto;
   }
-  #footer_main_p{
+  #footer_main_p {
     width: 80%;
     margin: auto;
     margin-top: 10px;
   }
 }
-
+#footerlogo {
+  display: flex;
+  align-items: center;
+  font-size: x-large;
+}

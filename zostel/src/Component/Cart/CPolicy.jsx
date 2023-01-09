@@ -3,7 +3,7 @@ import React from "react";
 export default function CPolicy() {
   return (
     <div style={{ width: "1200px", margin: "auto", marginTop: "20px" }}>
-      <h2>Cancellation Policy</h2>
+      <p id="name">Cancellation Policy</p>
       <div id="cpolicy">
         <p>
           We understand that sometimes plans change. Hence, to make it light on

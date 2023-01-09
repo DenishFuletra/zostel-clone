@@ -20,7 +20,12 @@ function Counter1() {
         >
           -
         </button>
-        <input type="number" id="countval" value={countRoom.room1} />
+        <input
+          type="number"
+          id="countval"
+          value={countRoom.room1}
+          style={{ textAlign: "center" }}
+        />
         <button
           id="incrbtn"
           onClick={() => {

@@ -11,7 +11,7 @@ import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 const options = [
   { value: "alleppey", label: "Alleppey" },
   { value: "aurangabad", label: "Aurangabad" },
-  { value: "bangalore", label: "Bangalore" },
+  { value: "banglore", label: "Banglore" },
   { value: "banikhet", label: "Banikhet" },
   { value: "barot", label: "Barot" },
   { value: "chamba", label: "Chamba" },
@@ -30,11 +30,6 @@ export default function BookingComponent() {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [option, setOption] = useState("DESTINATION");
-
-
-
-
-
 
   let HandleSubmit = (e) => {
     e.preventDefault();
@@ -139,7 +134,7 @@ export default function BookingComponent() {
                   dateFormat="E dd MMM"
                   endDate={endDate}
                   minDate={new Date()}
-                // excludeDates={[new Date(), subDays(new Date(), 1)]}
+                  // excludeDates={[new Date(), subDays(new Date(), 1)]}
                 />
               </div>
             </div>

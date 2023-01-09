@@ -8,18 +8,17 @@ export default function HeadBox() {
     <div
       style={{
         display: "flex",
-
         width: "1200px",
         height: "500px",
         margin: "auto",
         borderRadius: "10px",
+        justifyContent: "center",
       }}
     >
       <div
         style={{
-          width: "950px",
+          width: "756px",
           height: "500px",
-          margin: "3px",
 
           borderRadius: "10px",
         }}
@@ -75,9 +74,6 @@ export default function HeadBox() {
             height="100%"
             style={{ borderRadius: "10px" }}
           />
-        </div>
-        <div style={{ border: "2px solid pink", height: "30px" }}>
-          <p>View More</p>
         </div>
       </div>
     </div>

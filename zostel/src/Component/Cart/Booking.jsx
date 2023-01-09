@@ -55,7 +55,10 @@ export default function Booking() {
         <div id="bookroomdiv">
           <div id="bookhead">
             <div>
-              <h1 style={{ fontFamily: "CircularStdBlack", marginTop: "35px" }}>
+              <h1
+                id="name"
+                style={{ fontFamily: "CircularStdBlack", marginTop: "35px" }}
+              >
                 Book your stay
               </h1>
               <p style={{ fontFamily: "CircularStdMedium", color: "#4b4848" }}>
@@ -301,7 +304,7 @@ export default function Booking() {
           </div>
         </div>
         <div id="booksum">
-          <h2>Summary</h2>
+          <h2 id="name">Summary</h2>
           <p id="datadays">
             <strong>{days.TotalDays} nights starting from</strong>
             <p>

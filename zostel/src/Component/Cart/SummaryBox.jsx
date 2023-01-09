@@ -37,7 +37,7 @@ export default function SummaryBox() {
   function payPrice() {
     return Math.ceil(finalPrice() / 2);
   }
-  console.log(taxPrice());
+  console.log(countRoom.room1);
   return (
     <div>
       <div>

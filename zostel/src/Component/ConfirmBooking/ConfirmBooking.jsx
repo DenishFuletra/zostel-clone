@@ -169,7 +169,7 @@ function ConfirmBooking() {
         </div>
 
         <div className={style.summary_div}>
-          <h2>Summary</h2>
+          <h2 id="name">Summary</h2>
           <p id="datadays">
             <strong>{days.TotalDays} nights starting from</strong>
             <p>

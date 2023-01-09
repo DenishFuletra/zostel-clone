@@ -5,7 +5,13 @@ export default function Navbox() {
   );
   return (
     <div>
-      <h4>
+      <h4
+        style={{
+          paddingLeft: "130px",
+          fontFamily: "CircularStdBold",
+          marginBottom: "10px",
+        }}
+      >
         Home - Destination - {cityname} - Zostel {cityname}
       </h4>
     </div>
