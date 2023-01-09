@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function SummaryBox() {
   return (
@@ -24,7 +25,7 @@ export default function SummaryBox() {
           <p>2,819</p>
         </div>
         <div id="bookbtn">
-          <button id="booknow">Book now</button>
+          <button  id="booknow"><Link to={"/confirmbooking"}style={{ textDecoration: "none", color: "white" }}>Book now</Link></button>
         </div>
       </div>
     </div>

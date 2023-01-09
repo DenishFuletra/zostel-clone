@@ -19,11 +19,11 @@ export default function Address() {
       style={
         box
           ? {
-              width: "1200px",
-              margin: "auto",
-              height: "600px",
-              transition: "2s",
-            }
+            width: "1200px",
+            margin: "auto",
+            height: "600px",
+            transition: "2s",
+          }
           : { width: "1200px", margin: "auto" }
       }
     >
@@ -58,10 +58,10 @@ export default function Address() {
             style={
               box
                 ? {
-                    display: "grid",
-                    border: "1.8px solid rgb(227, 226, 226)",
-                    height: "300px",
-                  }
+                  display: "grid",
+                  border: "1.8px solid rgb(227, 226, 226)",
+                  height: "300px",
+                }
                 : { display: "none" }
             }
           >
