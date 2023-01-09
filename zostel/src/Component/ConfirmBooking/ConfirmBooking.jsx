@@ -38,7 +38,7 @@ function ConfirmBooking() {
               </div>
             </div>
 
-            <div className={style.name_div}>
+            <div className={style.name_div} style={{ marginLeft: "-50px" }}>
               <label htmlFor="">Name</label>
               <input type="text" placeholder="Enter the first name" />
               <input placeholder="Enter your middle name" />

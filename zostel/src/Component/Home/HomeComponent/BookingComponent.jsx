@@ -111,7 +111,7 @@ export default function BookingComponent() {
         </div>
         <div id="booking-time">
           <div id="booking-place-div">
-            <h5>SELECT YOUR DESTINATION</h5>
+            <h5>SELECT YOUR {option}</h5>
             <div id="booking-select">
               <Select
                 defaultValue={selectedOption}

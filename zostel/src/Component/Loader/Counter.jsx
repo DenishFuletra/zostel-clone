@@ -65,7 +65,12 @@ function Counter2() {
           -
         </button>
 
-        <input type="number" id="countval2" value={countRoom.room2} />
+        <input
+          type="number"
+          id="countval2"
+          value={countRoom.room2}
+          style={{ textAlign: "center" }}
+        />
 
         <button
           id="incrbtn"
@@ -104,7 +109,12 @@ function Counter3() {
         >
           -
         </button>
-        <input type="number" id="countval3" value={countRoom.room3} />
+        <input
+          type="number"
+          id="countval3"
+          value={countRoom.room3}
+          style={{ textAlign: "center" }}
+        />
         <button
           id="incrbtn"
           onClick={() => {
