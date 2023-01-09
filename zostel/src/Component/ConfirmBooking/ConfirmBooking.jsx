@@ -14,7 +14,7 @@ function ConfirmBooking() {
             }}
           >
             <div className={style.head}>
-             <div id={style.h2_guest1}> <h2>Guest Information</h2></div>
+              <div id={style.h2_guest1}> <h2>Guest Information</h2></div>
             </div>
 
             <div className={style.name_div}>
@@ -25,22 +25,22 @@ function ConfirmBooking() {
               <br />
             </div>
             <div className={style.select_div}>
-              <label style={{paddingRight:"10px"}} htmlFor="">Gender</label>
-              <select  style={{width:"78%" }} name="" id="">
+              <label style={{ paddingRight: "10px" }} htmlFor="">Gender</label>
+              <select style={{ width: "78%" }} name="" id="">
                 <option value="">Select</option>
                 <option value="">Male</option>
                 <option value="">Female</option>
               </select>
               <br />
-              <label style={{paddingRight:"23px"}} htmlFor="">Email</label>
-              <input  style={{width:"76%" , marginRight:"0px"}} type="text" placeholder="Enter your email" />
+              <label style={{ paddingRight: "23px" }} htmlFor="">Email</label>
+              <input style={{ width: "76%", marginRight: "0px" }} type="text" placeholder="Enter your email" />
               <br />
 
-              <label style={{paddingRight:"23px"}}>Phone</label>
-              <input style={{width:"76%" , marginRight:"0px"}} type="number" placeholder="Enter your number" />
+              <label style={{ paddingRight: "23px" }}>Phone</label>
+              <input style={{ width: "76%", marginRight: "0px" }} type="number" placeholder="Enter your number" />
 
-              <label style={{paddingRight:"14px"}} htmlFor="">Address</label>
-              <input style={{width:"76%" , marginRight:"10px"}}
+              <label style={{ paddingRight: "14px" }} htmlFor="">Address</label>
+              <input style={{ width: "76%", marginRight: "10px" }}
                 type="text"
                 placeholder="Enter your address"
                 className={style.address}
@@ -52,7 +52,7 @@ function ConfirmBooking() {
             </p>
           </form>
           <div className={style.property_div}>
-          <div id={style.h2_guest}> <h2>Property Policy</h2></div>
+            <div id={style.h2_guest}> <h2>Property Policy</h2></div>
             <ul>
               <li>
                 - Guests are required to pay a 100% advance at the time of
@@ -95,7 +95,7 @@ function ConfirmBooking() {
             </ul>
           </div>
           <div className={style.cancellation_div}>
-          <div id={style.h2_guest}> <h2>Cancellation Policy</h2></div>
+            <div id={style.h2_guest}> <h2>Cancellation Policy</h2></div>
             <ul>
               <li>
                 - All booking requests will be confirmed at a 100% advance
