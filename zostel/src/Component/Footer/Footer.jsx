@@ -87,6 +87,7 @@ function Footer() {
               />
             </div>
           </div>
+          
           <div className={style.social}>
             <div>
               <img
