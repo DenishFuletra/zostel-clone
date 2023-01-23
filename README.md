@@ -95,7 +95,7 @@ Thanks For Reading. <br />
 
 **Developers:** <br />
 👤 Denish Fuletra    https://denish-fuletra-portfolio.netlify.app/ <br />
-👤 Pawan Singh   https://akash06-portfolio.netlify.app/ <br />
+👤 Pawan Singh   https://pawsingh.netlify.app/ <br />
 👤 Anjali Prajapati   https://dada-khalandar-portfolio.vercel.app/#/ <br />
 👤 Sourabh Shukla https://sourabh-shukla.vercel.app/ <br /> 
 
