@@ -1,7 +1,7 @@
 ![ZostelLogo](https://user-images.githubusercontent.com/83694840/146682423-9bed17e3-83f7-412f-b5de-a0fe01f4f9bd.png)
 
 <h1> Zostel Clone </h1>
-<h5>https://zostel-clone-kerrybli.vercel.app/](https://zostel.vercel.app/</h5>
+<h5>https://zostel.vercel.app/</h5>
 
 
 We're a team of a total of six members including 2 UX-UI Designer aspirants, and 4 Full-Stack Developer aspirants of Masai School. <br />
