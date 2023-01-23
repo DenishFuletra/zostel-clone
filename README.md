@@ -29,29 +29,35 @@ In this project we have used the following tech stack: <br />
 
 ***Landing Page:-*** This is the Landing page (basically home page) when the user enters the website for the first time this page will show up. We have updated some of the carousel effects and animation. 
 
-![Alt text](zostel%20images/home.png)
-![Alt text](zostel%20images/destination.png)
-![Alt text](zostel%20images/nature.png)
-![Alt text](zostel%20images/what's%20new.png)
-![Alt text](zostel%20images/award.png)
+
+![home](https://user-images.githubusercontent.com/113697547/213976509-ffd7e261-776b-4a73-a50b-2480d660a636.png)
+![destination](https://user-images.githubusercontent.com/113697547/213976551-c2456c8b-89e3-4111-b9e1-34a621fcfada.png)
+![nature](https://user-images.githubusercontent.com/113697547/213976566-a9a90774-d3ea-42fa-9439-13f6dea2edfe.png)
+![what's new](https://user-images.githubusercontent.com/113697547/213976574-1b449329-5ab3-4c29-b4a0-5863a9e581c6.png)
+![award](https://user-images.githubusercontent.com/113697547/213976587-cc7f7636-9338-4d2c-bb0c-3dc6c3e8b5d6.png)
+
 <br />
 
 ***Selected Room Description Page:-***
-![Alt text](zostel%20images/banglore.png)
+
+![banglore](https://user-images.githubusercontent.com/113697547/213976616-9c45a464-065e-4ed5-b0a2-a9d114024f1b.png)
 
 
 
 <br />
 
 ***Selected Room with price Description Page:-***
-![Alt text](zostel%20images/book.png)
+![book](https://user-images.githubusercontent.com/113697547/213976638-a0e0308e-1df8-401c-b615-0310ff25deb0.png)
+![Locate](https://user-images.githubusercontent.com/113697547/213976703-d1d889ac-9f02-413b-9d70-5de68aaa9f3a.png)
+
 
 
 <br />
 
 ***Information Page:-***
+![booking](https://user-images.githubusercontent.com/113697547/213976656-3873d462-4b48-406a-a245-3085eadbe0fc.png)
 
-![Alt text](zostel%20images/booking.png)
+
 
 
 <br />
