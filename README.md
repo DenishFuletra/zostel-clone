@@ -63,7 +63,8 @@ In this project we have used the following tech stack: <br />
 <br />
 
 ***Payment Page:-***
-![Alt text](zostel%20images/payment.png)
+
+![payment](https://user-images.githubusercontent.com/113697547/213976819-a56edb81-4d5f-4edb-8398-108cb44b510e.png)
 
 
 
