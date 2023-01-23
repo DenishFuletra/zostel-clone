@@ -19,11 +19,11 @@ But we've solved all of those problems by doing collaborative work & flawless co
 
 ## *Technology Stack Used:-* <br />
 In this project we have used the following tech stack: <br />
-- Figma (Designing Tool)
 - React
 - CSS-module
 - Styled Component
 - BootStrap
+- Chakra ui
 
 ## *Some Snapshots of our project that we made:-* <br />
 
